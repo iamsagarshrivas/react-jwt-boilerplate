@@ -15,14 +15,10 @@ function Login() {
 
 	const onSubmitHandler = e => {
 		e.preventDefault();
-		get('/test/somedata')
+		post('/auth/login',formData)
 		.then(
 			res => console.log(res)
 		)
-		// post('/auth/login',formData)
-		// .then(
-		// 	res => console.log(res)
-		// )
 	}
 
 	return (
@@ -73,6 +69,5 @@ function Login() {
 		</div>
 	)
 }
-
 
 export default Login
